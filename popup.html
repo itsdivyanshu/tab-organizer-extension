@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Organizer Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2196F3;
+      --hover: #1976D2;
+      --bg: #f5f5f5;
+      --text: #333;
+      --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .stats {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .stats i {
+      width: 20px;
+      color: var(--primary);
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button:hover {
+      background-color: var(--hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    button.secondary {
+      background-color: #ffffff;
+      color: var(--text);
+      border: 1px solid #ddd;
+    }
+
+    button.secondary:hover {
+      background-color: #f8f8f8;
+    }
+
+    .section-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="stats" id="tabStats">
+      <div class="section-title">Current Status</div>
+      <div class="stat-item">
+        <i class="fas fa-table"></i>
+        <span id="tabCount">Loading...</span>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-folder"></i>
+        <span id="groupCount">Loading...</span>
+      </div>
+    </div>
+
+    <button id="organizeBtn">
+      <i class="fas fa-magic"></i>
+      <span>Smart Organize</span>
+    </button>
+
+    <button id="toggleGroupsBtn" class="secondary">
+      <i class="fas fa-compress-alt"></i>
+      <span>Collapse All</span>
+    </button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

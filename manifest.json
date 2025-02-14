@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Organizer",
+  "version": "1.0",
+  "description": "Organizes open tabs by grouping them based on domain.",
+  "permissions": ["tabs", "tabGroups", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "40": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
